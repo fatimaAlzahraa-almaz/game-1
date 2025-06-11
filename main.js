@@ -6,18 +6,19 @@ let h1=document.getElementById('score');
 let blockimg=document.getElementById('blockimg');
 let click=new Audio('jump.mp3');
 let lose=new Audio('gameover.mp3');
- 
+let loser=0;
 var a=0 ; let stopincrease;
 
  
  function hundleclick(){
+  if(!loser){
   click.play()
   if(ch.classList!='animate')
   ch.classList.add('animate');
   setTimeout(function(){
     ch.classList.remove('animate')
   },1000)
- 
+}
 }
 function isDead()
 {
@@ -30,10 +31,10 @@ function isDead()
     dog.style.animation='none';
     box1.style.animation='none';
     blockimg.style.animation='none';
-    a=0;
+    
     clearInterval(stopincrease)
      h1.innerHTML='score :'+a ;
-
+loser=1;
   }
    
    
@@ -44,14 +45,14 @@ setInterval(isDead,100);
 function increase()
 {
 a++;
-h1.innerHTML='score :'+a;
+h1.innerHTML='scores :'+a;
 console.log(a);
 }
  
 stopincrease=setInterval( increase,100);
 
 function tryagain()
-{
+{ loser=0;
   Block.style.animation='none';
     dog.style.animation='none';
     box1.style.animation='none';
