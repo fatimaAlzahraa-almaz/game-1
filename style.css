@@ -1,0 +1,145 @@
+#box1{
+  background-color:white;
+  width:700px;
+  height: 400px;
+ background-image: url('gray.png');
+ background-repeat: repeat;
+   
+ animation: moveBackground 2s linear infinite;
+}
+@keyframes moveBackground {
+            0% {
+                 background-position-x: left;
+            }
+            100% {
+                 background-position-x:  -700px;
+            }
+        }
+
+ 
+  
+ @keyframes smove {
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(-600px);
+  }
+ }
+#ch{
+       
+    border-radius: 70px;
+     
+    box-shadow: 2px 2px 2px 2px white;
+  width:160px;
+  height: 155px;
+  margin-left: 30px;
+  position: relative;
+  top:255px;
+  overflow: hidden;
+   
+}
+.animate{
+ animation: jump 0.9s  alternate;
+}
+.box3{
+       
+     border-radius: 30px;
+  box-shadow: 2px 2px 2px 2px white;
+width:80px;
+height: 70px;
+position: relative;
+left: 625px;
+top:175px;
+ overflow: hidden;
+animation: move 1.5s  infinite  linear;
+ 
+}
+@keyframes move {
+  0%{
+    left:650px;
+  }
+  100%{
+    left:0px;
+  }
+}
+@keyframes jump {
+  0%{
+     top:240px;
+  }
+  50%{
+top:160px;
+  }
+  75%{
+top:150px;
+  }
+  100%{
+    top:240px;
+  }
+}
+.btn{
+  background-color: black;
+  color:white;
+  width: 120px;
+  height: 60px;
+  border-radius: 25px;
+  font-family: cursive;
+  border-style: hidden;
+  font-size: 30px;
+  margin: 30px;
+}
+.btn:hover{
+  transform: scale(1.2);
+}
+#dog{
+   width:2000px;
+   animation: move2  0.8s steps(9) infinite    ;
+    position: relative;
+    top:-465px;
+}
+@keyframes move2 {
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(-1500px);
+  }
+}
+#blockimg{
+  
+  position: relative;
+  width:1000px; 
+   right: 30px;
+   top:-16px;
+  animation: move3  0.5s steps(7) infinite   ;
+   padding:5px
+ }
+ @keyframes move3 {
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(-1000px);
+  }
+}
+ .after{
+  display: grid;
+  grid-template-columns: 300px 100px;
+  
+  position: relative;
+  font-family: cursive;
+  
+ }
+ #score{
+  padding:10px;
+  animation: big 3s infinite alternate;
+ }
+ @keyframes big {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+  
+ }
