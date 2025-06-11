@@ -8,7 +8,14 @@ let click=new Audio('jump.mp3');
 let lose=new Audio('gameover.mp3');
 let loser=0;
 var a=0 ; let stopincrease;
+function increase()
+{
+a++;
+h1.innerHTML='score :'+a;
 
+}
+ 
+stopincrease=setInterval( increase,100);
  
  function hundleclick(){
   if(!loser){
@@ -31,9 +38,11 @@ function isDead()
     dog.style.animation='none';
     box1.style.animation='none';
     blockimg.style.animation='none';
+    clearInterval(stopincrease);
+    h1.innerHTML='score :'+a ;
     a=0;
-    clearInterval(stopincrease)
-     h1.innerHTML='score :'+a ;
+    
+     
 loser=1;
   }
    
@@ -42,14 +51,7 @@ loser=1;
 setInterval(isDead,100);
  
  
-function increase()
-{
-a++;
-h1.innerHTML='score :'+a;
-console.log(a);
-}
  
-stopincrease=setInterval( increase,100);
 
 function tryagain()
 { loser=0;
@@ -63,6 +65,7 @@ function tryagain()
     box1.style.animation='';
     blockimg.style.animation='';
     a=0;
+      h1.innerHTML='score :'+a ;
 stopincrease=setInterval( increase,100);
     },10)
  
