@@ -1,4 +1,4 @@
-let ch=document.getElementById('ch');
+ let ch=document.getElementById('ch');
 let Block=document.getElementById('block');
 let dog=document.getElementById('dog');
 let box1=document.getElementById('box1');
@@ -26,19 +26,13 @@ function isDead()
   if(chtop>180 && leftb>0 && leftb<=175)
   {   lose.play();
     alert('Game Over XD !!');
-    
-    
-      
-     
-    
-    
     Block.style.animation='none';
     dog.style.animation='none';
     box1.style.animation='none';
     blockimg.style.animation='none';
     
     clearInterval(stopincrease)
-     h1.innerHTML='score :'+a +' Refresh the page to try again :)';
+     h1.innerHTML='score :'+a ;
 
   }
    
@@ -55,4 +49,20 @@ console.log(a);
 }
  
 stopincrease=setInterval( increase,100);
+
+function tryagain()
+{
+  Block.style.animation='none';
+    dog.style.animation='none';
+    box1.style.animation='none';
+    blockimg.style.animation='none';
+    setTimeout(()=>{
+       Block.style.animation='';
+    dog.style.animation='';
+    box1.style.animation='';
+    blockimg.style.animation='';
+    a=0;
+stopincrease=setInterval( increase,100);
+    },10)
  
+}
