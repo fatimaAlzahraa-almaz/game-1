@@ -31,7 +31,7 @@ function isDead()
     dog.style.animation='none';
     box1.style.animation='none';
     blockimg.style.animation='none';
-    
+    a=0;
     clearInterval(stopincrease)
      h1.innerHTML='score :'+a ;
 loser=1;
@@ -45,7 +45,7 @@ setInterval(isDead,100);
 function increase()
 {
 a++;
-h1.innerHTML='scores :'+a;
+h1.innerHTML='score :'+a;
 console.log(a);
 }
  
